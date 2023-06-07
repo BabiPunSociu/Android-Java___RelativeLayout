@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+
+    android:padding="2dp"
+
+    >
+    <!-- '
+       Để đặt vị trí cho view so với view cha:   alignParen... = "true"
+    -->
+    <!--
+       Để đặt vị trí cho view so với view con khác
+     - Đặt bên dưới: below
+     - Đặt bên trên: above
+     -->
+
+    <!--btn_1 ở góc trên cùng bên trái view cha-->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 1"
+        android:textSize="@dimen/sizeText"
+        android:layout_alignParentTop="true"
+        />
+
+    <!--btn_2 ở ngay dưới btn_1: sử dụng below btn1-->
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_1"
+        android:text="btn 2"
+        android:textSize="@dimen/sizeText" />
+
+    <!--btn_3 ở góc trái - dưới cùng view cha-->
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 3"
+        android:textSize="@dimen/sizeText"
+        android:layout_alignParentBottom="true"
+        />
+    <!--btn_4 ở ngay trên view btn_3: dùng above btn_3-->
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 4"
+        android:textSize="@dimen/sizeText"
+        android:layout_above="@+id/btn_3"
+        />
+    <!--btn_5 ở góc trái - trên cùng view cha-->
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 5"
+        android:textSize="@dimen/sizeText"
+        android:layout_alignParentEnd="true"
+        />
+    <!--btn_6 ở ngay trên view btn_5: dùng below btn_5 và alignParentEnd-->
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_5"
+        android:layout_alignParentEnd="true"
+        android:text="btn 6"
+        android:textSize="@dimen/sizeText" />
+
+    <!--btn_7 ở góc trái - dưới cùng view cha-->
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 7"
+        android:textSize="@dimen/sizeText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <!--btn_8 ở ngay trên btn_7: dùng above btn_7 và alignParentEnd-->
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 8"
+        android:textSize="@dimen/sizeText"
+        android:layout_above="@+id/btn_7"
+        android:layout_alignParentEnd="true"
+        />
+
+    <!--btn_9 ở chính giữa view cha: dùng centerInParent -->
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 9"
+        android:textSize="@dimen/sizeText"
+        android:layout_centerInParent="true"
+        />
+
+    <!--btn_10 ở chính giữa lề trái view cha: centerVertical-->
+    <Button
+        android:id="@+id/btn_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 10"
+        android:textSize="@dimen/sizeText"
+        android:layout_centerVertical="true"
+        />
+
+    <!--btn_11 ở chính giữa lề trên view cha: layout_centerHorizontal-->
+    <Button
+        android:id="@+id/btn_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 11"
+        android:textSize="@dimen/sizeText"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--btn_12 ở chính giữa lề phải view cha: centerVertical,alignParentEnd-->
+    <Button
+        android:id="@+id/btn_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 12"
+        android:textSize="@dimen/sizeText"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <!--btn_13 ở chính giữa lề dưới view cha: layout_centerHorizontal-->
+    <Button
+        android:id="@+id/btn_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 13"
+        android:textSize="@dimen/sizeText"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+
+    <!--btn_14 ở bên trái btn_6: layout_toStartOf btn_6 và below btn_5 -->
+    <Button
+        android:id="@+id/btn_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 14"
+        android:textSize="@dimen/sizeText"
+        android:layout_toStartOf="@+id/btn_6"
+        android:layout_below="@+id/btn_5"
+        />
+
+    <!--btn_15 ở bên phải btn_4: layout_toEndOf btn_4 và layout_above btn_3 -->
+    <Button
+        android:id="@+id/btn_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn 15"
+        android:textSize="@dimen/sizeText"
+        android:layout_toEndOf="@id/btn_4"
+        android:layout_above="@+id/btn_3"
+        />
+</RelativeLayout>
